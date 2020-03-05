@@ -21,7 +21,7 @@ const connection = mysql.createConnection({
     database: "oregontrail_db"
   });
 
-app.get('/', (req, res) => {
+app.get('/api/route', (req, res) => {
     connection.query(`select * from routecard`, (err, results) => {
         if (err) {
             return res. send(err);
